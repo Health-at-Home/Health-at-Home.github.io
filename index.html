@@ -52,20 +52,40 @@
           border-color: white;
           color:white;
         }
-        #abtlink {
-          text-decoration: none;
-          font-size: 25px;
-          font-family: "Times New Roman";
-	    float:right;
-        }
-        #abtlink:hover {
-          text-decoration: underline;
-        }
+.topnav {
+  overflow: hidden;
+  background-color: #a572fc;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 30px;
+}
+
+.topnav a:hover {
+  background-color: white;
+  color: #a572fc;
+}
+
+.topnav a.active {
+  background-color: #5cd9ff;
+  color: white;
+}
       </style>
   </head>
   <body style="background-color: rgb(193, 229, 232); margin: 0px 0px;">
+    <center>
+    <div class="topnav">
+      <a class="active" href="./index.html" style="margin-left: 500px;">Home</a>
+      <a href="./questionnaire.html">Questionnaire</a>
+      <a href="./aboutus.html">About Us</a>
+    </div>
+    </center>
     <center><div id="home">
-	<p id="abtlink" onclick="location.href='./aboutus.html'">About Us</p><br><br><br>
       <center><h1 id="name">Health@Home</h1></center>
       <center><button width="30" onclick="location.href='./questionnaire.html'" id="surveybtn">Find What OTC Meds You Need!</button></center>
       <br>
