@@ -6,18 +6,13 @@
         #home {
           background-color: #ffd580;
           padding-bottom: 100px;
-          padding-left: 180px;
-	    padding-right: 58px;
-	    padding-top: 50px;
           margin: 0px 0px;
         }
         #name {
           font-size: 100px;
           font-family: 'Times New Roman';
-          color: black;
+          color: red;
           margin: 0px 0px;
-          margin-bottom: 100px;
-	    margin-right: 120px;
         }
         .abtushead {
           font-size: 50px;
@@ -47,7 +42,6 @@
           background-color:white;
           font-family:'Times New Roman';
           font-size: 30px;
-	    margin-right: 120px;
           transition-duration: 0.5s;
         }
         #surveybtn:hover {
@@ -74,7 +68,18 @@
   background-color: white;
   color: #ffd580;
 }
-
+#container { position:relative; }
+#container video {
+    position:relative;
+    z-index:0;
+}
+#overlay {
+    position:absolute;
+    top:40%;
+    left:30%;
+    z-index:1;
+    margin: 0px 0px;
+}
       </style>
   </head>
   <body style="background-color: rgb(193, 229, 232); margin: 0px 0px;">
@@ -86,11 +91,16 @@
       <a href="./aboutus.html">About Us</a>
     </div>
     </center>
-    <center><div id="home">
-      <center><h1 id="name">Health@Home</h1></center>
-      <center><button width="30" onclick="location.href='./questionnaire.html'" id="surveybtn">Find What OTC Meds You Need!</button></center>
+    <center><div id="container"><div id="home">
+      <video id="video" width="100%" autoplay muted loop>
+        <source src="Background.mp4">
+      </video>
+      <div id="overlay"><center><h1 id="name">Health@Home</h1></center>
       <br>
-    </div></center>
+      <br>
+      <center><button width="30" onclick="location.href='./questionnaire.html'" id="surveybtn">Find What OTC Meds You Need!</button></center>
+      <br></div>
+    </div></div></center>
     <div id="abtus">
       <center><h1 class="abtushead">We Have A Passion</h1></center>
       <center><p class="abtustxt">With COVID-19 spreading, you may want to know 
